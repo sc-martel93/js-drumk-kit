@@ -14,6 +14,9 @@ let kickAudio = document.getElementById('kick-audio')
 let openHatBtn = document.querySelector('.open-hat-btn')
 let openHatAudio = document.getElementById('open-hat-audio')
 
+let boomBtm = document.querySelector('.boom-btn')
+let boomAudio = document.getElementById('boom-audio')
+
 
 document.body.addEventListener('keypress', function (e) {
     let key = e.key
@@ -34,6 +37,10 @@ document.body.addEventListener('keypress', function (e) {
         case 'f':
             openHatAudio.currentTime = 0
             openHatAudio.play()
+            break
+        case 'g':
+            boomAudio.currentTime = 0
+            boomAudio.play()
             break
 
     }
