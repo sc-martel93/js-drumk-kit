@@ -8,6 +8,8 @@ clapBtn.addEventListener('click', function (e) {
 let hiHatBtn = document.querySelector('.hit-hat-btn')
 let hiHatAudio = document.getElementById('hi-hat-audio')
 
+let kickBtn = document.querySelector('.kick-btn')
+let kickAudio = document.getElementById('kick-audio')
 
 
 document.body.addEventListener('keydown', function (e) {
@@ -18,6 +20,8 @@ document.body.addEventListener('keydown', function (e) {
     if (e.key === 's') {
         hiHatAudio.play()
     }
+    if (e.key === 'd')
+        kickAudio.play()
 
 })
 
