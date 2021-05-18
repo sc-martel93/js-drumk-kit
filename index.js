@@ -26,6 +26,9 @@ let snareAudio = document.getElementById('snare-audio')
 let tomBtn = document.querySelector('.tom-btn')
 let tomAudio = document.getElementById('tom-audio')
 
+let tinkBtn = document.querySelector('.tink-btn')
+let tinkAudio = document.getElementById('tink-audio')
+
 document.body.addEventListener('keypress', function (e) {
     let key = e.key
     switch (key) {
@@ -33,16 +36,16 @@ document.body.addEventListener('keypress', function (e) {
             clapAudio.currentTime = 0
             clapAudio.play()
             break
-        case 's':
+        case 'k':
             hiHatAudio.currentTime = 0
             hiHatAudio.play()
             break
-        case 'c':   // double kick
-        case 'd':
+        case 'v':   // double kick
+        case 'f':
             kickAudio.currentTime = 0
             kickAudio.play()
             break
-        case 'f':
+        case 'l':
             openHatAudio.currentTime = 0
             openHatAudio.play()
             break
@@ -58,10 +61,16 @@ document.body.addEventListener('keypress', function (e) {
             snareAudio.currentTime = 0
             snareAudio.play()
             break
-        case 'k':
+        case 's':
             tomAudio.currentTime = 0
             tomAudio.play()
             break
+        case 'd':
+            tinkAudio.currentTime = 0
+            tinkAudio.play()
+            break
+        default:
+            console.log("Press a proper key!");
     }
 
 
