@@ -5,7 +5,7 @@ clapBtn.addEventListener('click', function (e) {
     clapAudio.play()
 })
 
-let hiHatBtn = document.querySelector('.hit-hat-btn')
+let hiHatBtn = document.querySelector('.hi-hat-btn')
 let hiHatAudio = document.getElementById('hi-hat-audio')
 
 let kickBtn = document.querySelector('.kick-btn')
@@ -35,40 +35,48 @@ document.body.addEventListener('keypress', function (e) {
         case 'a':
             clapAudio.currentTime = 0
             clapAudio.play()
-
+            handleOnClick(clapBtn)
             break
         case 'k':
             hiHatAudio.currentTime = 0
             hiHatAudio.play()
+            handleOnClick(hiHatBtn)
             break
         case 'v':   // double kick
         case 'f':
             kickAudio.currentTime = 0
             kickAudio.play()
+            handleOnClick(kickBtn)
             break
         case 'l':
             openHatAudio.currentTime = 0
             openHatAudio.play()
+            handleOnClick(openHatBtn)
             break
         case 'g':
             boomAudio.currentTime = 0
             boomAudio.play()
+            handleOnClick(boomBtn)
             break
         case 'h':
             rideAudio.currentTime = 0
             rideAudio.play()
+            handleOnClick(rideBtn)
             break
         case 'j':
             snareAudio.currentTime = 0
             snareAudio.play()
+            handleOnClick(snareBtn)
             break
         case 's':
             tomAudio.currentTime = 0
             tomAudio.play()
+            handleOnClick(tomBtn)
             break
         case 'd':
             tinkAudio.currentTime = 0
             tinkAudio.play()
+            handleOnClick(tinkBtn)
             break
         default:
             console.log("Press a proper key!");
@@ -76,4 +84,11 @@ document.body.addEventListener('keypress', function (e) {
 
 
 })
+
+let handleOnClick = (element) => {
+    element.classList.add('click')
+    setTimeout(() => {
+        element.classList.remove('click')
+    }, 200)
+}
 
