@@ -35,19 +35,18 @@ button {
             6px 6px 0px red;
         }
     to {
-        box-shadow: 0 0 100px red,
-            1px 1px 0px red,
-            2px 2px 0px red,
-            3px 3px 0px red,
-            4px 4px 0px red,
-            5px 5px 0px red,
-            6px 6px 0px red;
+        box-shadow: 0 0 30px red,
+        1px 1px 0px grey,
+        2px 2px 0px grey,
+        3px 3px 0px grey;
+        transform: translateY(2px);
+        transform: translateX(2px);
         }
 }
 
-button:hover {
+button:hover{
     color: red;
-    background-color: rgba(78, 78, 78, 0.007);
+    background-color:rgba(207, 202, 202, 0.925);
     animation-name: buttonPress;
     animation-duration: 1s;
 }
