@@ -34,7 +34,7 @@ header h1 {
 }
 
 button {
-    background-color: #36454f;
+    background-color: rgb(54,69,79);
     width: 10%;
     min-width: 90px;
     margin: 10px;
@@ -54,7 +54,7 @@ button p {
 
 .click {
     color: red;
-    background-color:rgba(207, 202, 202, 0.925);
+    background-color:rgba(54,69,79, 0.95);
     animation-name: buttonPress;
     animation-duration: .15s;
 }
@@ -75,6 +75,7 @@ button p {
         3px 3px 0px grey;
         transform: translateY(2px);
         transform: translateX(2px);
+        border: 2px solid rgba(255, 0, 0, .75);
         }
 }
 
