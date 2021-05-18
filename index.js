@@ -2,7 +2,7 @@
 let clapBtn = document.querySelector('.clap-btn')
 let clapAudio = document.getElementById('clap-audio')
 clapBtn.addEventListener('click', function (e) {
-    clapAudio.play()
+
 })
 
 let hiHatBtn = document.querySelector('.hi-hat-btn')
@@ -33,50 +33,32 @@ document.body.addEventListener('keypress', function (e) {
     let key = e.key.toLowerCase()
     switch (key) {
         case 'a':
-            clapAudio.currentTime = 0
-            clapAudio.play()
-            handleOnClick(clapBtn)
+            handleClick(clapBtn, clapAudio)
             break
         case 'k':
-            hiHatAudio.currentTime = 0
-            hiHatAudio.play()
-            handleOnClick(hiHatBtn)
+            handleClick(hiHatBtn, hiHatAudio)
             break
         case 'v':   // double kick
         case 'f':
-            kickAudio.currentTime = 0
-            kickAudio.play()
-            handleOnClick(kickBtn)
+            handleClick(kickBtn, kickAudio)
             break
         case 'l':
-            openHatAudio.currentTime = 0
-            openHatAudio.play()
-            handleOnClick(openHatBtn)
+            handleClick(openHatBtn, openHatAudio)
             break
         case 'g':
-            boomAudio.currentTime = 0
-            boomAudio.play()
-            handleOnClick(boomBtn)
+            handleClick(boomBtn, boomAudio)
             break
         case 'h':
-            rideAudio.currentTime = 0
-            rideAudio.play()
-            handleOnClick(rideBtn)
+            handleClick(rideBtn, rideAudio)
             break
         case 'j':
-            snareAudio.currentTime = 0
-            snareAudio.play()
-            handleOnClick(snareBtn)
+            handleClick(snareBtn, snareAudio)
             break
         case 's':
-            tomAudio.currentTime = 0
-            tomAudio.play()
-            handleOnClick(tomBtn)
+            handleClick(tomBtn, tomAudio)
             break
         case 'd':
-            tinkAudio.currentTime = 0
-            tinkAudio.play()
-            handleOnClick(tinkBtn)
+            handleClick(tinkBtn, tinkAudio)
             break
         default:
             console.log("Press a proper key!");
@@ -85,14 +67,15 @@ document.body.addEventListener('keypress', function (e) {
 
 })
 
-let handleOnClick = (element) => {
-    if (element.classList.contains('click')) {
-        element.classList.remove('click')
-        element.classList.add('click')
-    }
+let hande
+
+let handleClick = (element, audio) => {
     element.classList.add('click')
     setTimeout(() => {
         element.classList.remove('click')
     }, 150)
+
+    audio.currentTime = 0
+    audio.play()
 }
 
