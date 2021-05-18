@@ -20,6 +20,9 @@ let boomAudio = document.getElementById('boom-audio')
 let rideBtn = document.querySelector('.ride-btn')
 let rideAudio = document.getElementById('ride-audio')
 
+let snareBtn = document.querySelector('.snare-btn')
+let snareAudio = document.getElementById('snare-audio')
+
 document.body.addEventListener('keypress', function (e) {
     let key = e.key
     switch (key) {
@@ -47,6 +50,10 @@ document.body.addEventListener('keypress', function (e) {
         case 'h':
             rideAudio.currentTime = 0
             rideAudio.play()
+            break
+        case 'j':
+            snareAudio.currentTime = 0
+            snareAudio.play()
             break
 
     }
