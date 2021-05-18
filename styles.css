@@ -21,11 +21,15 @@ button p {
     color: grey;
 }
 
+button:active {
+    color: red;
+    box-shadow: 0 0 15px red;
+}
+
 @media (max-width: 955px) {
     .drum-kit {
         height: 0;
         flex-wrap: wrap;
         justify-content: space-around;
-        
     }
 }
