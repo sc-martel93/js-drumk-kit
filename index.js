@@ -14,9 +14,11 @@ let kickAudio = document.getElementById('kick-audio')
 let openHatBtn = document.querySelector('.open-hat-btn')
 let openHatAudio = document.getElementById('open-hat-audio')
 
-let boomBtm = document.querySelector('.boom-btn')
+let boomBtn = document.querySelector('.boom-btn')
 let boomAudio = document.getElementById('boom-audio')
 
+let rideBtn = document.querySelector('.ride-btn')
+let rideAudio = document.getElementById('ride-audio')
 
 document.body.addEventListener('keypress', function (e) {
     let key = e.key
@@ -41,6 +43,10 @@ document.body.addEventListener('keypress', function (e) {
         case 'g':
             boomAudio.currentTime = 0
             boomAudio.play()
+            break
+        case 'h':
+            rideAudio.currentTime = 0
+            rideAudio.play()
             break
 
     }
