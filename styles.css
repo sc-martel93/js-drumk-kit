@@ -13,6 +13,12 @@ button {
     width: 10%;
     min-width: 90px;
     margin: 10px;
+    border-radius: 10%;
+    border: none;
+}
+
+button p {
+    color: grey;
 }
 
 @media (max-width: 955px) {
