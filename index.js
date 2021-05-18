@@ -35,6 +35,7 @@ document.body.addEventListener('keypress', function (e) {
         case 'a':
             clapAudio.currentTime = 0
             clapAudio.play()
+            clapBtn.click()
             break
         case 'k':
             hiHatAudio.currentTime = 0

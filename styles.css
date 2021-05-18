@@ -15,15 +15,41 @@ button {
     margin: 10px;
     border-radius: 10%;
     border: none;
+    box-shadow: 1px 1px 0px #999,
+                2px 2px 0px #999,
+                3px 3px 0px #999,
+                4px 4px 0px #999,
+                5px 5px 0px #999,
+                6px 6px 0px #999;   
 }
 
-button p {
-    color: grey;
+
+
+@keyframes buttonPress {
+    from {box-shadow: 0 0 5px red,
+            1px 1px 0px red,
+            2px 2px 0px red,
+            3px 3px 0px red,
+            4px 4px 0px red,
+            5px 5px 0px red,
+            6px 6px 0px red;
+        }
+    to {
+        box-shadow: 0 0 100px red,
+            1px 1px 0px red,
+            2px 2px 0px red,
+            3px 3px 0px red,
+            4px 4px 0px red,
+            5px 5px 0px red,
+            6px 6px 0px red;
+        }
 }
 
-button:active {
+button:hover {
     color: red;
-    box-shadow: 0 0 15px red;
+    background-color: rgba(78, 78, 78, 0.007);
+    animation-name: buttonPress;
+    animation-duration: 1s;
 }
 
 @media (max-width: 955px) {
