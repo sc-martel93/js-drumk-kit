@@ -1,4 +1,3 @@
-
 let clapBtn = document.querySelector('.clap-btn')
 let clapAudio = document.getElementById('clap-audio')
 clapBtn.addEventListener('click', function (e) {
@@ -85,7 +84,7 @@ document.body.addEventListener('keypress', function (e) {
             handleClick(tinkBtn, tinkAudio)
             break
         default:
-            console.log("Press a proper key!");
+
     }
 
 

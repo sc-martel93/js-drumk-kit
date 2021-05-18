@@ -1,5 +1,21 @@
 body {
     background-color: grey;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+   
+}
+
+header {
+    border-bottom: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content:center;
+    
+}
+
+header h1 {
+    letter-spacing: 10px;
 }
 .drum-kit {
     text-align: center;
@@ -21,6 +37,10 @@ button {
                 4px 4px 0px #999,
                 5px 5px 0px #999,
                 6px 6px 0px #999;   
+}
+
+button p {
+    color: grey;
 }
 
 .click {
