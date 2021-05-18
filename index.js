@@ -30,7 +30,7 @@ let tinkBtn = document.querySelector('.tink-btn')
 let tinkAudio = document.getElementById('tink-audio')
 
 document.body.addEventListener('keypress', function (e) {
-    let key = e.key
+    let key = e.key.toLowerCase()
     switch (key) {
         case 'a':
             clapAudio.currentTime = 0

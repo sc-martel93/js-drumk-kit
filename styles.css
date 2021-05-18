@@ -8,3 +8,18 @@ body {
     justify-content: space-around;
     align-items: center;  
 }
+
+button {
+    width: 10%;
+    min-width: 90px;
+    margin: 10px;
+}
+
+@media (max-width: 955px) {
+    .drum-kit {
+        height: 0;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+}
