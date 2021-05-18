@@ -11,17 +11,33 @@ let hiHatAudio = document.getElementById('hi-hat-audio')
 let kickBtn = document.querySelector('.kick-btn')
 let kickAudio = document.getElementById('kick-audio')
 
+let openHatBtn = document.querySelector('.open-hat-btn')
+let openHatAudio = document.getElementById('open-hat-audio')
 
-document.body.addEventListener('keydown', function (e) {
 
-    if (e.key === 'a') {
-        clapAudio.play()
+document.body.addEventListener('keypress', function (e) {
+    let key = e.key
+    switch (key) {
+        case 'a':
+            clapAudio.currentTime = 0
+            clapAudio.play()
+            break
+        case 's':
+            hiHatAudio.currentTime = 0
+            hiHatAudio.play()
+            break
+        case 'c':   // double kick
+        case 'd':
+            kickAudio.currentTime = 0
+            kickAudio.play()
+            break
+        case 'f':
+            openHatAudio.currentTime = 0
+            openHatAudio.play()
+            break
+
     }
-    if (e.key === 's') {
-        hiHatAudio.play()
-    }
-    if (e.key === 'd')
-        kickAudio.play()
+
 
 })
 
