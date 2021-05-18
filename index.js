@@ -86,9 +86,13 @@ document.body.addEventListener('keypress', function (e) {
 })
 
 let handleOnClick = (element) => {
+    if (element.classList.contains('click')) {
+        element.classList.remove('click')
+        element.classList.add('click')
+    }
     element.classList.add('click')
     setTimeout(() => {
         element.classList.remove('click')
-    }, 200)
+    }, 150)
 }
 

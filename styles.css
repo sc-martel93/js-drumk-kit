@@ -27,7 +27,7 @@ button {
     color: red;
     background-color:rgba(207, 202, 202, 0.925);
     animation-name: buttonPress;
-    animation-duration: .2s;
+    animation-duration: .15s;
 }
 
 @keyframes buttonPress {
@@ -40,7 +40,7 @@ button {
             6px 6px 0px red;
         }
     to {
-        box-shadow: 0 0 30px red,
+        box-shadow: 0 0 30px rgba(255, 0, 0, .75),
         1px 1px 0px grey,
         2px 2px 0px grey,
         3px 3px 0px grey;
