@@ -58,6 +58,7 @@ header img {
 
 .drum-kit {
     width: 100%;
+    max-width: 420px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -67,8 +68,7 @@ header img {
 
 button {
     background-color: rgb(54,69,79);
-    width: 10%;
-    color: white;
+    color: white;    
     min-width: 90px;
     margin: 10px;
     border-radius: 10%;
@@ -113,6 +113,31 @@ button p {
         }
 }
 
+@media (min-width: 700px){
+    * {
+        font-size: x-large;
+    }
+    .about{
+        max-width: 900px;
+    }
+    .drum-kit {
+        max-width: 800px;
+    }
+    button {
+        height: 200px;
+        width: 200px;
+        border: 5px solid #999;
+    }
+    button:focus {
+        border: 5px solid rgba(255, 0, 0, .75);
+    }
+    .about-btn:active {
+        border: 5px solid rgba(255, 0, 0, .75);
+    }
+    .click {
+        border: 5px solid rgba(255, 0, 0, .75);
+    }
+}
 @media (max-width: 400px) {
     header {
         margin-bottom: 30px;
