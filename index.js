@@ -68,6 +68,7 @@ document.body.addEventListener('keypress', function (e) {
         case 'l':
             handleClick(openHatBtn, openHatAudio)
             break
+        case 'b': // double kick
         case 'g':
             handleClick(boomBtn, boomAudio)
             break
@@ -100,3 +101,27 @@ let handleClick = (element, audio) => {
     audio.play()
 }
 
+let header = document.querySelector("header")
+let aboutButton = document.getElementById("about-btn")
+let aboutSection = document.querySelector('.about')
+let initialMarginValue = header.style.marginBottom
+
+aboutButton.addEventListener("click", function () {
+    if (aboutSection.style.display === 'none') {
+        aboutButton.innerHTML = "Close"
+        aboutSection.style.display = 'flex'
+        header.style.marginBottom = '0'
+    }
+
+    else {
+        aboutSection.style.display = 'none'
+        header.style.marginBottom = initialMarginValue
+        aboutButton.innerHTML = "About"
+    }
+
+})
+
+let codeButton = document.getElementById("code-link")
+codeButton.addEventListener("click", function () {
+    window.open("https://github.com/sc-martel93/js-drumk-kit")
+})

@@ -9,9 +9,15 @@ body {
     font-family: 'Poppins', sans-serif;  
 }
 
+button:focus {
+    border: 2px solid rgba(255, 0, 0, .75);
+    outline:none;
+}
+
 header {
     border-bottom: 1px solid white;
     margin-bottom: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,10 +31,6 @@ header img {
     height: 50px;
 }
 
-button:focus {
-    border: 2px solid rgba(255, 0, 0, .75);
-    outline:none;
-}
 .about-btn:active {
     color: red;
     background-color:rgba(54,69,79, 0.95);
@@ -37,8 +39,13 @@ button:focus {
     animation-duration: .15s;
 }
 
+.about {
+    display: none;
+    background-color: grey;
+}
+
 .drum-kit {
-    width: 400px;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -95,17 +102,17 @@ button p {
 }
 
 @media (max-width: 400px) {
+    header {
+        margin-bottom: 30px;
+    }
     .drum-kit {
-        width: 400px;    
+        width: 100%;    
     }
 }
 
 @media (max-width: 300px){
-    .drum-kit {
-        width: 300px;
-    }
     header {
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
     header h1 {
         letter-spacing: 5px;
