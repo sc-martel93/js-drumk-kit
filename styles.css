@@ -12,10 +12,25 @@ body {
 header {
     border-bottom: 1px solid white;
     margin-bottom: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header img {
     margin: 20px 0 20px 10px;
+}
+
+.about-btn {
+    height: 50px;
+}
+
+.about-btn:active {
+    color: red;
+    background-color:rgba(54,69,79, 0.95);
+    border: 2px solid rgba(255, 0, 0, .75);
+    animation-name: buttonPress;
+    animation-duration: .15s;
 }
 
 .drum-kit {
