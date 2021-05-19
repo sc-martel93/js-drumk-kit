@@ -111,12 +111,14 @@ aboutButton.addEventListener("click", function () {
         aboutButton.innerHTML = "Close"
         aboutSection.style.display = 'flex'
         header.style.marginBottom = '0'
+        header.style.flexDirection = 'column'
     }
 
     else {
         aboutSection.style.display = 'none'
-        header.style.marginBottom = initialMarginValue
         aboutButton.innerHTML = "About"
+        header.style.marginBottom = initialMarginValue
+        header.style.flexDirection = 'row'
     }
 
 })

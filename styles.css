@@ -41,7 +41,19 @@ header img {
 
 .about {
     display: none;
+    max-width: 400px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
     background-color: grey;
+}
+
+.about p {
+    padding: 0 25px;
+}
+
+.about button{
+    width: 70%;
 }
 
 .drum-kit {
