@@ -85,10 +85,7 @@ document.body.addEventListener('keypress', function (e) {
             handleClick(tinkBtn, tinkAudio)
             break
         default:
-
     }
-
-
 })
 
 let handleClick = (element, audio) => {
@@ -104,7 +101,9 @@ let handleClick = (element, audio) => {
 let header = document.querySelector("header")
 let aboutButton = document.getElementById("about-btn")
 let aboutSection = document.querySelector('.about')
+
 let initialMarginValue = header.style.marginBottom
+let initialFlexDirection = header.style.flexDirection
 
 aboutButton.addEventListener("click", function () {
     if (aboutSection.style.display === 'none') {
@@ -116,9 +115,9 @@ aboutButton.addEventListener("click", function () {
 
     else {
         aboutSection.style.display = 'none'
-        aboutButton.innerHTML = "About"
+        aboutButton.innerHTML = 'About'
         header.style.marginBottom = initialMarginValue
-        header.style.flexDirection = 'row'
+        header.style.flexDirection = initialFlexDirection
     }
 
 })
